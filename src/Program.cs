@@ -30,11 +30,11 @@
                 switch (usbDevice.PnpDeviceID.Substring(0,21))
                 {
                     case "USB\\VID_1EAF&PID_0003":
-                        outputLine = "MULTI-Module DFU Bootloader device found.";
+                        outputLine = $"MULTI-Module DFU Bootloader device found: {usbDevice.Name}";
                         returnCode = 1;
                         break;
                     case "USB\\VID_1EAF&PID_0004":
-                        outputLine = "MULTI-Module USB Serial device found.";
+                        outputLine = $"MULTI-Module USB Serial device found: {usbDevice.Name}";
                         returnCode = 2;
                         break;
                     default:
